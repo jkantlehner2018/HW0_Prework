@@ -16,20 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var yearSegmentedControl: UISegmentedControl!
     //Pets Amount
     @IBOutlet weak var numberOfPetsLabel: UILabel!
-    
     @IBOutlet weak var numberOfPetsStepper: UIStepper!
     @IBAction func stepperDidChange(_ sender: UIStepper) {
         numberOfPetsLabel.text = Int(sender.value).description
     }
-    
-    
-    
     //Want more pets?
     @IBOutlet weak var morePetsSwitch: UISwitch!
     
-    
     //button
-    
     @IBAction func introduceSelfDidTapped(_ sender: UIButton) {
         let year = yearSegmentedControl.titleForSegment(at: yearSegmentedControl.selectedSegmentIndex)
         
@@ -41,12 +35,6 @@ class ViewController: UIViewController {
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-    
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
